@@ -1,0 +1,11 @@
+Cambios Realizados
+
+Agregue tanto en index como en todas su secciones
+titulos que discriben que hay en la pestaña abierta.
+Agregue las siguientes keywords:indumentaria, web,
+Argentina, moda, indumentaria femenina.
+Agregue la siguiente descripcion al index: Tienda
+online Argentina de Indumentaria femenina con 
+tendecias actuales dirigidas a adolecentes
+Agregue un mixin y como lo aplicaria a modo de comentario
+porque no tenia en donde agregarlo en mi scss.
