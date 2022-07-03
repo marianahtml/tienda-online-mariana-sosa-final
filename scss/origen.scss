@@ -35,9 +35,13 @@ span:hover{
     "menu pie pie"
     ;
     grid-template-columns: 15% auto 20%;
-    grid-template-rows: 1fr 2fr 2fr 1fr ;
-    grid-column-gap: 5px;
+    grid-template-rows: 2fr 3fr 2fr 1fr ;
+    grid-column-gap: 10px;
     grid-row-gap: 5px;
+}
+article{
+    background-color: white;
+    border-radius: 4px;
 }
 /*nombre de las areas*/
 header{
@@ -63,11 +67,48 @@ aside{
     display: flex;
     flex-flow: column nowrap;
 }
-/*
-@mixin caja ($ancho, $alto){
-    width: $ancho;
-    height: $alto;
-     APLICACION
-     .body{
-        @include caja(100px, 130px); }
-} 
+
+.texto-animado{
+    animation-name: texto;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes texto {
+    from {
+        transform: translateX(1300px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+.flexservicios{
+    display: flex;
+    flex-flow: row nowrap;
+    
+}
+//new in//
+.flexproductosn{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.flexserviciosn{
+    display: flex;
+    flex-flow: row nowrap;
+}
+#grilla-areas1{
+    display: grid;
+    grid-template-areas:
+    "menu cabeza cabeza "
+    /*fila2*/
+    " menu productos brazo "
+    /*fila3*/
+    "menu servicios brazo "
+    "menu pie pie"
+    ;
+    grid-template-columns: 15% auto 20%;
+    grid-template-rows: 2fr 3fr 2fr 1fr ;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+}
+//buzos//
