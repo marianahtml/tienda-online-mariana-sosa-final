@@ -5,15 +5,13 @@
     box-sizing: border-box;
 }
 body{
-    width: 100%;
-    height: 100vh; 
+    @include .body 
 }
-
 .border{
     border: solid 1px white;
     text-align: center;
-    margin-top: 10px;
-}
+    margin-top: 10px;  }
+
 span{
     background-color: beige;
     margin: 5px;
@@ -74,6 +72,7 @@ aside{
     animation-iteration-count: infinite;
 
 }
+  
 @keyframes texto {
     from {
         transform: translateX(1300px);
@@ -111,4 +110,30 @@ aside{
     grid-column-gap: 10px;
     grid-row-gap: 5px;
 }
-//buzos//
+
+@import "boostrap/bootstrap.scss";
+
+
+ 
+ /*MIXIN*/
+ @mixin .body ($ancho,$alto) { 
+    height: 100vh; 
+    width: 100%;
+ } 
+ 
+ /*extend*/
+
+.texto-animado{
+    animation-name: texto;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;  }
+
+.texto-animado{ @extend .texto-animado;
+    animation-duration: 5s;
+} 
+/*maps */
+@each $e in article { 
+    .boton-#($article)
+    background-color: blue;
+}
+ 
