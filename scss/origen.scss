@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 body{
-    @include .body 
+    height: 100vh;
+    width: 100%;
 }
 .border{
     border: solid 1px white;
@@ -13,13 +14,13 @@ body{
     margin-top: 10px;  }
 
 span{
-    background-color: beige;
+    background-color: white;
     margin: 5px;
     padding: 10px;
 }
 span:hover{
-    background-color: beige;
-    border-left: solid 10px lightgrey;
+    background-color: white;
+    border-left: solid 10px white;
 }
 /*grid por areas*/
 #grilla-areas{
@@ -84,16 +85,28 @@ aside{
 .flexservicios{
     display: flex;
     flex-flow: row nowrap;
+    img{
+        width: 170px;
+        height: auto;
+    }
     
 }
 //new in//
 .flexproductosn{
     display: flex;
     flex-flow: row nowrap;
+    img{
+        width: 250px;
+        height: auto;
+    }
 }
 .flexserviciosn{
     display: flex;
     flex-flow: row nowrap;
+    img{
+        width: 250px;
+        height: auto;
+    }
 }
 #grilla-areas1{
     display: grid;
@@ -113,27 +126,60 @@ aside{
 
 @import "boostrap/bootstrap.scss";
 
-
  
- /*MIXIN*/
- @mixin .body ($ancho,$alto) { 
-    height: 100vh; 
-    width: 100%;
- } 
+//smart//
+ @media (max-width: 480px){
+    #grilla-areas{
+        display: grid;
+        grid-template-areas:
+        "menu"
+        "cabeza "
+        "productos "
+        "brazo"
+        "servicios"
+        "pie"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 2fr 3fr 1fr 2fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+    }
+
+ }
  
- /*extend*/
 
-.texto-animado{
-    animation-name: texto;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;  }
+//tablet//
+@media(min-width: 481px) and (max-width: 1023px){
+    #grilla-areas{
+        display: grid;
+        grid-template-areas:
+        "cabeza cabeza"
+        "menu menu "
+        "productos productos "
+        "servicios brazo"
+        "pie pie"
+        ;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 2fr 1fr 3fr 2fr 1fr;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    .menuFlex{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .flexproductosn{
+        display: flex;
+        flex-flow: column nowrap;
+        img{
+            width: 250px;
+            height: auto;
+        }
+    }
+    
+}  
 
-.texto-animado{ @extend .texto-animado;
-    animation-duration: 5s;
-} 
-/*maps */
-@each $e in article { 
-    .boton-#($article)
-    background-color: blue;
+//responsive desktop//
+ 
+@media (min-width: 1024px) {
 }
- 
