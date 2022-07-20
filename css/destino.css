@@ -55,6 +55,10 @@ footer {
 #productos {
   grid-area: productos;
 }
+#productos img {
+  width: 420px;
+  height: auto;
+}
 
 #servicios {
   grid-area: servicios;

@@ -48,9 +48,13 @@ header{
 }
 footer{
     grid-area: pie;
-}
+     }
 #productos{
     grid-area: productos;
+    img{
+        width: 420px;
+        height: auto;
+    }
 }
 #servicios{
     grid-area: servicios;
@@ -71,7 +75,6 @@ aside{
     animation-name: texto;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-
 }
   
 @keyframes texto {
