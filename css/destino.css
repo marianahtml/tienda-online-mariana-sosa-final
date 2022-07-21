@@ -56,7 +56,7 @@ footer {
   grid-area: productos;
 }
 #productos img {
-  width: 420px;
+  width: 700px;
   height: auto;
 }
 
@@ -10240,6 +10240,10 @@ textarea.form-control-lg {
     grid-column-gap: 10px;
     grid-row-gap: 5px;
   }
+  .menuFlex {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 }
 @media (min-width: 481px) and (max-width: 1023px) {
   #grilla-areas {
@@ -10259,6 +10263,14 @@ textarea.form-control-lg {
     flex-flow: column nowrap;
   }
   .flexproductosn img {
+    width: 250px;
+    height: auto;
+  }
+  .flexserviciosn {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .flexserviciosn img {
     width: 250px;
     height: auto;
   }

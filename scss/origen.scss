@@ -45,6 +45,7 @@ article{
 /*nombre de las areas*/
 header{
     grid-area: cabeza;
+    
 }
 footer{
     grid-area: pie;
@@ -52,7 +53,7 @@ footer{
 #productos{
     grid-area: productos;
     img{
-        width: 420px;
+        width: 700px;
         height: auto;
     }
 }
@@ -61,9 +62,11 @@ footer{
 }
 nav{
     grid-area: menu;
+    
 }
 aside{
     grid-area: brazo;
+   
 
 }
 .menuFlex{
@@ -147,6 +150,10 @@ aside{
         grid-column-gap: 10px;
         grid-row-gap: 5px;
     }
+    .menuFlex{
+        display: flex;
+        flex-flow: column nowrap;
+    }
 
  }
  
@@ -179,7 +186,14 @@ aside{
             height: auto;
         }
     }
-    
+    .flexserviciosn{
+        display: flex;
+        flex-flow: column nowrap;
+        img{
+            width: 250px;
+            height: auto;
+        }
+     }
 }  
 
 //responsive desktop//
